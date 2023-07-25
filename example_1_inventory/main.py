@@ -1,10 +1,11 @@
-from speakleash import Speakleash
+"""Speakleash datasets inventory"""
 import os
+
+from speakleash import Speakleash
 from termcolor import colored
 
 base_dir = os.path.join(".")
 replicate_to = os.path.join(base_dir, "datasets")
-total_size_mb = 0
 
 sl = Speakleash(replicate_to)
 
@@ -49,4 +50,4 @@ for d in sl.datasets:
         license_url = "n/a"
 
     print("{0};{1} MB;{2};{3};{4};{5}".format(colored(d.name,'green'), size_mb, formatted_extraction_type, copyrigth_label, licence, license_url))
-    total_size_mb += size_mb
+

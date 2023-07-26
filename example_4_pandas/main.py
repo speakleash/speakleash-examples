@@ -19,7 +19,6 @@ def get_dataframe(project_name: str, speakleash_class: Speakleash) -> pd.DataFra
     reader = get_reader(project_name, speakleash_class)
     return pd.DataFrame({"text": s[0]} | s[1] for s in reader)
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
     PROJECT = parse_args().project_name

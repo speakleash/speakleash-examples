@@ -21,13 +21,20 @@ def get_dataframe(project_name: str, speakleash_class: Speakleash) -> pd.DataFra
 
 if __name__ == '__main__':
 
+    # defining project name
     PROJECT = parse_args().project_name
 
+    # initiating directory
     base_dir = os.path.join('datasets')
-
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
+
+    # initiating Speakleash
     sl = Speakleash(base_dir)
+
+    # creating dataframe
     df = get_dataframe(PROJECT, sl)
+
+    # <optional> saving dataframe as pickle
     with open(f"{base_dir}/{PROJECT}.pkl","wb") as f:
         pickle.dump(df, f)

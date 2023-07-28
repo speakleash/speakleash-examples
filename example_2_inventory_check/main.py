@@ -50,4 +50,3 @@ for d in sl.datasets:
         license_url = "n/a"
 
     print("{0};{1} MB;{2};{3};{4};{5}".format(colored(d.name,'green'), size_mb, formatted_extraction_type, copyrigth_label, licence, license_url))
-

@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     base_dir = os.path.join(".")
     replicate_to = os.path.join(base_dir, "datasets")
-    print("Replicate to:", replicate_to)
+    print(f"Replicate datasets to: {replicate_to}")
     sl = Speakleash(replicate_to)
 
     # Iterate over Speakleash datasets

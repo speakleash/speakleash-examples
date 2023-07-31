@@ -58,8 +58,7 @@ if __name__ == '__main__':
             licence = "multiple"
             license_url = "n/a"
 
-        # print("{0};{1} MB;{2};{3};{4};{5}".format(colored(d.name,'green'), size_mb,
-        #           formatted_extraction_type, copyrigth_label, licence, license_url))
+        # Add row to Pretty Table with dataset information
         inventory_table.add_row([colored(d.name, "green"), f"{size_mb:,}".replace(",", " "),
                                  formatted_extraction_type, copyrigth_label,
                                  licence[:30], license_url[:30],])

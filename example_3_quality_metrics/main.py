@@ -1,34 +1,44 @@
-from speakleash import Speakleash
+"""Speakleash: get dataset quality metrics"""
+
 import os
 
-base_dir = os.path.join(".")
-replicate_to = os.path.join(base_dir, "datasets")
+from speakleash import Speakleash
 
-sl = Speakleash(replicate_to)
-name = "web_artykuły_finanse_3"
 
-print("Replicate to:", replicate_to)
+if __name__ == '__main__':
 
-if sl.get(name).quality_metrics:
-    print(sl.get(name).quality)
+    base_dir = os.path.join(".")
+    replicate_to = os.path.join(base_dir, "datasets")
+    print(f"Replicate datasets to: {replicate_to}")
+    sl = Speakleash(replicate_to)
 
-limit = 5
-counter = 0
-ds = sl.get(name).ext_data
+    # Choose dataset
+    dataset_name = "web_artykuły_finanse_3"
 
-for doc in ds:
+    # Import quality metrics distribution for selected dataset
+    if sl.get(dataset_name).quality_metrics:
+        print(f"Quality metrics: {sl.get(dataset_name).quality} \n")
 
-    txt, meta = doc
+    # Import dataset (documents and their metadata)
+    ds = sl.get(dataset_name).ext_data
+    limit = 5
 
-    if meta.get("quality", "") == 'HIGH':
-        print("High-quality document")
+    # Iterate over documents in dataset
+    for index, doc in enumerate(ds):
 
-    if meta.get("quality", "") == 'LOW':
-        print("Low-quality document")
+        txt, meta = doc
+        doc_quality = meta.get("quality", "")
 
-    if meta.get("quality", "") == 'MEDIUM':
-        print("Medium-quality document")
+        # Check quality metrics
+        if doc_quality == 'HIGH':
+            print("~ High-quality document:")
+        elif doc_quality == 'MEDIUM':
+            print("~ Medium-quality document:")
+        elif doc_quality == 'LOW':
+            print("~ Low-quality document:")
 
-    counter = counter + 1
-    if counter > limit:
-        break
+        # Print part of document
+        print(txt[:150] + f' [... + more {len(txt)-150} characters] \n')
+
+        if index == limit-1:
+            break

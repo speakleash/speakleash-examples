@@ -1,16 +1,23 @@
-# Generate .html charts from the dataset
-
 import os
 import pandas as pd
 import plotly.express as px
 
 from speakleash import Speakleash
 
-save_path = "imgs/"
+SAVE_PATH = "imgs/"
 
 
 class Chart:
+    """Generate .html charts from the dataset."""
     def __init__(self, PROJECT):
+        """
+        Initialize Chart class.
+
+        Parameters
+        ----------
+        PROJECT : str
+            Name of the dataset to generate charts for.
+        """
         self.PROJECT = PROJECT
         base_dir = os.path.join('datasets')
         replicate_to = os.path.join(base_dir, self.PROJECT)
@@ -21,6 +28,7 @@ class Chart:
 
     @property
     def get_meta(self):
+        """Extract metadata from the dataset and create DataFrame."""
         lst1 = []
         for doc in self.ds:
             txt, meta = doc
@@ -31,6 +39,7 @@ class Chart:
 
     @property
     def get_data(self):
+        """Process metadata and create DataFrame for .html charts."""
         df = self.meta_frame.copy()
         df = df.drop_duplicates(subset=['text'], ignore_index=True)
         cols = ['punctuations', 'symbols', 'stopwords', 'oovs', 'pos_num', 'pos_x', 'capitalized_words']
@@ -55,14 +64,15 @@ class Chart:
         return df_charts
 
     def draw_charts(self):
+        """Generate and save .html charts."""
         df_charts = self.df_charts
         for i in df_charts.columns:
             if i == "quality":
                 pass
             else:
                 # Handle non-existing directory for save .html files
-                if not os.path.exists(save_path):
-                    os.makedirs(save_path)
+                if not os.path.exists(SAVE_PATH):
+                    os.makedirs(SAVE_PATH)
                 fig = px.histogram(df_charts, x=df_charts[i], y=df_charts[i], nbins=40, color="quality",
                                    category_orders={"quality": ["LOW", "MEDIUM", "HIGH"]},
                                    color_discrete_sequence=px.colors.qualitative.Dark2,

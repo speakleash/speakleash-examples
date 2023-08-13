@@ -35,7 +35,7 @@ def tokenize_text(text: str) -> list[str]:
 
 if __name__ == '__main__':
 
-    PROJECT = 'form_symfonik'
+    PROJECT = "saos"
 
     # Initiating directory
     base_dir = os.path.join(".")

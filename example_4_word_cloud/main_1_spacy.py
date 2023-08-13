@@ -3,19 +3,16 @@
 import os
 from collections import Counter
 
-from wordcloud import WordCloud
-import matplotlib.pyplot as plt
 from speakleash import Speakleash
+import matplotlib.pyplot as plt
 import spacy
+from wordcloud import WordCloud
 
 
 
 if __name__ == '__main__':
 
-    PROJECT = 'form_symfonik'
-    # If the documents in the dataset are too large, 
-    # too much RAM may be allocated (spacy calculations), 
-    # this may cause problems with the operation of the system.
+    PROJECT = "saos"
 
     base_dir = os.path.join(os.path.dirname(__file__))
     replicate_to = os.path.join(base_dir, "datasets")
@@ -42,7 +39,7 @@ if __name__ == '__main__':
         counts_all.update(counts_line)
 
     wc.generate_from_frequencies(counts_all)
-
+    
     plt.figure()
     plt.imshow(wc, interpolation="bilinear")
     plt.axis("off")

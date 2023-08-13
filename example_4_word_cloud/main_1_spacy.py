@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     # TODO!: Read only document len() < nlp.max_length
 
-    texts = [txt for _, txt in zip(range(limit), ds)]
+    texts = [txt[:nlp.max_length] for _, txt in zip(range(limit), ds)]
     docs = list(nlp.pipe(texts))
 
     for doc in docs:

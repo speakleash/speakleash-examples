@@ -24,6 +24,11 @@ and the output resulting from running the script.
 import os
 from speakleash import Speakleash
 
+# CONFIG
+name = "plwiki"  # provide dataset name from where will be taken HIGH quality documents
+limit = 10  # write how many files you want to collect from selected dataset
+###
+
 
 def get_data(txt_folder_name):
     """
@@ -55,8 +60,6 @@ def save_quality_docs(txt_folder_name, quality='HIGH'):
     replicate_to_txt = os.path.join(base_dir, txt_folder_name)
 
     sl = Speakleash(speakleash_dir)
-    name = "plwiki"
-    limit = 10
     counter = 0
     ds = sl.get(name).ext_data
 

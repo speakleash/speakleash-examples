@@ -10,3 +10,5 @@ Sample codes on how to use [SpeakLeash](https://github.com/speakleash/speakleash
 <sup>(Additional libraries can be installed via _requirements.txt_ in this folder)</sup>
 
 [example_3_quality_metrics](https://github.com/speakleash/speakleash-examples/tree/main/example_3_quality_metrics) <-- Example shows how to check quality metrics distribution in a given dataset and extract quality info for each document.
+
+[example_4_extraction_to_files](https://github.com/speakleash/speakleash-examples/tree/main/example_4_extraction_to_files) <-- Example shows how to extract high quality documents from selected dataset and provides functionalities to create necessary directories and save documents of specified quality from the speakleash dataset to a specific folder location.

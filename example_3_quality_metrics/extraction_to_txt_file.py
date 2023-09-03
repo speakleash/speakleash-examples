@@ -1,6 +1,3 @@
-import os
-from speakleash import Speakleash
-
 """
 This module provides functionalities to create necessary directories and save documents 
 of specified quality from the speakleash dataset to a specified folder.
@@ -22,6 +19,10 @@ This usage information covers the main aspects of the script, including the modi
 importing and using the module's functions, directly running the script, 
 and the output resulting from running the script.
 """
+
+
+import os
+from speakleash import Speakleash
 
 
 def get_data(txt_folder_name):

@@ -26,10 +26,10 @@ and the output resulting from running the script.
 
 def get_data(txt_folder_name):
     """
+    This method creates the necessary directories if they don't already exist.
+
     :param txt_folder_name: The name of the folder where the high-quality documents will be saved.
     :return: None
-
-    This method creates the necessary directories if they don't already exist.
     """
     base_dir = os.path.join(".")
     speakleash_dir = os.path.join(base_dir, "datasets")
@@ -43,11 +43,11 @@ def get_data(txt_folder_name):
 
 def save_quality_docs(txt_folder_name, quality='HIGH'):
     """
+    This method saves documents of the specified quality from the Speakleash dataset to a specified folder.
+
     :param txt_folder_name: The name of the folder where the documents will be saved.
     :param quality: The judge quality of the documents.
     :return: None
-
-    This method saves documents of the specified quality from the Speakleash dataset to a specified folder.
     """
     base_dir = os.path.join(".")
     speakleash_dir = os.path.join(base_dir, "datasets")

@@ -1,0 +1,5 @@
+wordcloud
+matplotlib
+spacy
+nltk
+https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.5.0/pl_core_news_md-3.5.0-py3-none-any.whl

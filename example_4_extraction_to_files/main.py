@@ -64,7 +64,7 @@ def save_quality_docs(txt_folder_name, quality='HIGH'):
         txt, meta = doc
         if meta.get("quality", "") == quality:
             print(f"{quality}-quality document")
-            with open(os.path.join(replicate_to_txt, f'{quality}_quality_doc_{counter}.txt'), 'w') as out_file:
+            with open(os.path.join(replicate_to_txt, f'{quality}_quality_doc_{counter}.txt'), 'w', encoding='utf-8') as out_file:
                 out_file.write(txt)
             counter += 1
             if counter > limit:

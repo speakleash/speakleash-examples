@@ -2,9 +2,9 @@
 
 import os
 
-from speakleash import Speakleash
 import matplotlib.pyplot as plt
 import nltk
+from speakleash import Speakleash
 from wordcloud import WordCloud
 
 

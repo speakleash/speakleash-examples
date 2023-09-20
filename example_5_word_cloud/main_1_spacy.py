@@ -3,9 +3,9 @@
 import os
 from collections import Counter
 
-from speakleash import Speakleash
 import matplotlib.pyplot as plt
 import spacy
+from speakleash import Speakleash
 from wordcloud import WordCloud
 
 # For the script to work you need to download and install the spacy model: 

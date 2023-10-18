@@ -12,3 +12,7 @@ Sample codes on how to use [SpeakLeash](https://github.com/speakleash/speakleash
 [example_3_quality_metrics](https://github.com/speakleash/speakleash-examples/tree/main/example_3_quality_metrics) <-- Example shows how to check quality metrics distribution in a given dataset and extract quality info for each document.
 
 [example_4_extraction_to_files](https://github.com/speakleash/speakleash-examples/tree/main/example_4_extraction_to_files) <-- Example shows how to extract high quality documents from selected dataset and provides functionalities to create necessary directories and save documents of specified quality from the speakleash dataset to a specific folder location.
+
+[example_5_word_cloud](https://github.com/speakleash/speakleash-examples/tree/main/example_5_word_cloud) <-- Example shows two cases of generation word cloud examples. The first case is with the usage of spaCy library, using the lemmatizer. Second case uses NLTK library.
+
+[example_6_pandas](https://github.com/speakleash/speakleash-examples/tree/main/example_5_word_cloud) <-- Example shows how to put Speakleash dataset into the pandas DataFrame.

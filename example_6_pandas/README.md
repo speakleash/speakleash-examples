@@ -1,3 +1,3 @@
 # Example No. 6
 
-Example show how to put Speakleash dataset into the pandas DataFrame.
+Example shows how to put Speakleash dataset into the pandas DataFrame.

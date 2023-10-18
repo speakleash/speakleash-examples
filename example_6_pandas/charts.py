@@ -1,7 +1,9 @@
+"""Dataset charts generator."""
+
 import os
+
 import pandas as pd
 import plotly.express as px
-
 from speakleash import Speakleash
 
 SAVE_PATH = "imgs/"

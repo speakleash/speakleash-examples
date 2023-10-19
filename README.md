@@ -16,3 +16,7 @@ Sample codes on how to use [SpeakLeash](https://github.com/speakleash/speakleash
 [example_5_word_cloud](https://github.com/speakleash/speakleash-examples/tree/main/example_5_word_cloud) <-- Example shows two cases of generation word cloud examples. The first case is with the usage of spaCy library, using the lemmatizer. Second case uses NLTK library.
 
 [example_6_pandas](https://github.com/speakleash/speakleash-examples/tree/main/example_6_pandas) <-- Example shows how to put Speakleash dataset into the pandas DataFrame.
+
+[example_7_pandas_polars](https://github.com/speakleash/speakleash-examples/tree/main/example_7_pandas_polars) <-- Example shows how to import data from SpeakLeash datasets into Pandas and Polars libraries dataframes.
+
+[example_8_dataset_vis](https://github.com/speakleash/speakleash-examples/tree/main/example_8_dataset_vis) <-- Example shows how to load data from the SpeakLeash library datasets and visualize selected metrics considering document quality, among other things.

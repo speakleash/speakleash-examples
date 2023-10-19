@@ -17,6 +17,6 @@ Sample codes on how to use [SpeakLeash](https://github.com/speakleash/speakleash
 
 [example_6_pandas](https://github.com/speakleash/speakleash-examples/tree/main/example_6_pandas) <-- Example shows how to put Speakleash dataset into the pandas DataFrame.
 
-[example_7_pandas_polars](https://github.com/speakleash/speakleash-examples/tree/main/example_7_pandas_polars) <-- Example shows how to import data from SpeakLeash datasets into Pandas and Polars libraries' dataframes.
+[example_7_pandas_polars](https://github.com/speakleash/speakleash-examples/tree/main/example_7_pandas_polars) <-- Example shows how to import data from SpeakLeash datasets into Pandas and Polars libraries dataframes.
 
 [example_8_dataset_vis](https://github.com/speakleash/speakleash-examples/tree/main/example_8_dataset_vis) <-- Example shows how to load data from the SpeakLeash library datasets and visualize selected metrics considering document quality, among other things.

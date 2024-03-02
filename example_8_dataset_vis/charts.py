@@ -2,9 +2,9 @@
 
 import os
 
-from speakleash import Speakleash
 import pandas as pd
 import plotly.express as px
+from speakleash import Speakleash
 
 
 class Chart:
@@ -24,7 +24,7 @@ class Chart:
         self.CHARTS_FOLDER = CHARTS_FOLDER
         base_dir = os.path.join('datasets')
         replicate_to = os.path.join(base_dir, self.PROJECT)
-        sl = Speakleash(replicate_to)  
+        sl = Speakleash(replicate_to)
         self.ds = sl.get(self.PROJECT).ext_data
         self.meta_frame = self.get_meta
         self.df_charts = self.get_data
@@ -49,20 +49,20 @@ class Chart:
         for col in cols:
             df[f'{col}_ratio'] = df[col] / df['words']
         df_charts = df[[
-            'avg_sentence_length',
-            'avg_word_length',
-            'verb_ratio',
-            'noun_ratio',
-            'punctuations_ratio',
-            'symbols_ratio',
-            'stopwords_ratio',
-            'oovs_ratio',
-            'lexical_density',
-            'camel_case',
-            'capitalized_words_ratio',
-            'pos_x_ratio',
-            'pos_num_ratio',
-            'gunning_fog']]
+                'avg_sentence_length',
+                'avg_word_length',
+                'verb_ratio',
+                'noun_ratio',
+                'punctuations_ratio',
+                'symbols_ratio',
+                'stopwords_ratio',
+                'oovs_ratio',
+                'lexical_density',
+                'camel_case',
+                'capitalized_words_ratio',
+                'pos_x_ratio',
+                'pos_num_ratio',
+                'gunning_fog']]
         df_charts = df_charts.assign(quality=df["quality"])
         return df_charts
 

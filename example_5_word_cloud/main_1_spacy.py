@@ -8,7 +8,7 @@ import spacy
 from speakleash import Speakleash
 from wordcloud import WordCloud
 
-# For the script to work you need to download and install the spacy model: 
+# For the script to work you need to download and install the spacy model:
 # - included in "requirements.txt" -> pip install -r requirements.txt
 # - or available from the link:
 # https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.5.0/pl_core_news_md-3.5.0-py3-none-any.whl
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     # Create wordcloud
     wc.generate_from_frequencies(counts_all)
-    
+
     # Display wordcloud
     plt.figure()
     plt.imshow(wc, interpolation="bilinear")

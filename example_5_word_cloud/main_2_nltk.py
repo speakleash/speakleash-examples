@@ -36,6 +36,9 @@ if __name__ == '__main__':
     # Select dataset ("wolne_lektury_corpus" is smaller one)
     PROJECT = "wolne_lektury_corpus"
 
+    # Download Punkt sentence tokenizer
+    nltk.download('punkt')
+
     # Initiating directory
     base_dir = os.path.join(os.path.dirname(__file__))
     replicate_to = os.path.join(base_dir, "datasets")
@@ -60,9 +63,9 @@ if __name__ == '__main__':
     word_freq = nltk.FreqDist(all_words)
 
     # Create wordcloud
-    wc = WordCloud(stopwords=set(stopwords_dict), 
-                    max_font_size=100, 
-                    max_words=100, 
+    wc = WordCloud(stopwords=set(stopwords_dict),
+                    max_font_size=100,
+                    max_words=100,
                     background_color="white",
                     contour_width=1).generate_from_frequencies(word_freq)
 

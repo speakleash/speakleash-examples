@@ -13,10 +13,11 @@ if __name__ == '__main__':
     sl = Speakleash(replicate_to)
 
     # Choose dataset
-    dataset_name = "web_artykuły_finanse_3"
+    dataset_name = "forum_symfonika"
 
     # Import quality metrics distribution for selected dataset
     if sl.get(dataset_name).quality_metrics:
+        print(sl.get(dataset_name).manifest)
         print(f"Quality metrics: {sl.get(dataset_name).quality} \n")
 
     # Import dataset (documents and their metadata)

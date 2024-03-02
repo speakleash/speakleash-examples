@@ -1,13 +1,13 @@
 """
-This module provides functionalities to create necessary directories and save documents 
+This module provides functionalities to create necessary directories and save documents
 of specified quality from the speakleash dataset to a specified folder.
 
-Use `get_data(txt_folder_name)` function for creating directories and 
+Use `get_data(txt_folder_name)` function for creating directories and
 `save_quality_docs(txt_folder_name, quality)` for saving documents of a given quality.
 
 Example usage:
 
-1. In the `save_quality_docs` function, specify the name of the dataset to be downloaded 
+1. In the `save_quality_docs` function, specify the name of the dataset to be downloaded
    by setting the `quality` parameter.
 2. Set the `limit` variable in the `save_quality_docs` function to determine how many documents you want to retrieve.
 3. Import the module and use the provided functions in your own Python script.
@@ -15,8 +15,8 @@ Example usage:
 5. If not present, a folder named "datasets" will be created in the script's directory to store the downloaded dataset.
 6. If not present, another folder named "datasets_high_quality_txt" will be created to store high-quality text files.
 
-This usage information covers the main aspects of the script, including the modification of key parameters, 
-importing and using the module's functions, directly running the script, 
+This usage information covers the main aspects of the script, including the modification of key parameters,
+importing and using the module's functions, directly running the script,
 and the output resulting from running the script.
 """
 

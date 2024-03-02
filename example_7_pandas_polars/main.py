@@ -31,7 +31,7 @@ if __name__ == '__main__':
     pandas_df = pd.DataFrame({"text": s[0], **s[1]} for s in data)
     print(pandas_df.info(memory_usage='deep'))
 
-    # Delete variables to free memory 
+    # Delete variables to free memory
     del data
     del pandas_df
     gc.collect()
